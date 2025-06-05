@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palm Beach County Grand Jury Citizen Complaint Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #1d3557;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #1d3557;
+            padding-bottom: 20px;
+        }
+        .form-section {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .form-field {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px; /* Larger font size for mobile */
+        }
+        textarea {
+            height: 100px;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .checkbox-container input {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .guidelines {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        .print-button {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .print-button button {
+            background-color: #1d3557;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .print-button button:hover {
+            background-color: #2a4a73;
+        }
+        .mobile-instructions {
+            background-color: #e7f3ff;
+            border: 1px solid #b3d7ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .mobile-instructions {
+                display: block;
+            }
+            input[type="text"], textarea, button {
+                font-size: 16px; /* Prevent zoom on focus in iOS */
+            }
+            .form-section {
+                padding: 10px;
+            }
+            body {
+                padding: 10px;
+            }
+        }
+        @media print {
+            .print-button, .mobile-instructions {
+                display: none;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .form-section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>County of Palm Beach Grand Jury</h1>
+        <h2>Citizen Complaint Form</h2>
+        <p>
+            Palm Beach County Grand Jury<br>
+            P.O. Box 2096 Palm Beach FL 33489<br>
+            Email: justice@pbcgrandjury.com
+        </p>
+    </div>
+
+    <div class="mobile-instructions">
+        <h3>Mobile Device Instructions:</h3>
+        <p>To complete this form on your mobile device:</p>
+        <ol>
+            <li>Fill out the form fields below</li>
+            <li>Take screenshots of the completed form</li>
+            <li>Email the screenshots to justice@pbcgrandjury.com</li>
+        </ol>
+        <p>Alternatively, you can download the PDF version from our website for better compatibility.</p>
+    </div>
+
+    <div class="print-button">
+        <button onclick="window.print()">Print this form</button>
+    </div>
+
+    <form>
+        <div class="form-section">
+            <div class="form-field">
+                <label for="name">1. Who: (Your Name)</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-field">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-field">
+                <label for="city-state-zip">City, State, Zip Code</label>
+                <input type="text" id="city-state-zip" name="city-state-zip">
+            </div>
+            <div class="form-field">
+                <label for="telephone">Telephone</label>
+                <input type="text" id="telephone" name="telephone">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-field">
+                <label for="complaint">2. What: Subject of Complaint: Briefly state the nature of complaint and the action of what Palm Beach County department, section agency or official(s) that you believe was illegal or improper.</label>
+                <textarea id="complaint" name="complaint"></textarea>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="additional-sheets-1" name="additional-sheets-1">
+                    <label for="additional-sheets-1">Check This Box if you are using additional sheets for this question</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-field">
+                <label for="incident-date">3. When: Date(s) of Incident</label>
+                <input type="text" id="incident-date" name="incident-date">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-field">
+                <label for="where">4. Where: Names and addresses of other departments, agencies or officials involved in this complaint. Include dates/types of contact, i.e. phone, letter, personal.</label>
+                <textarea id="where" name="where"></textarea>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="additional-sheets-2" name="additional-sheets-2">
+                    <label for="additional-sheets-2">Check This Box if you are using additional sheets for this question</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-field">
+                <label for="why-how">5. Why/How:</label>
+                <textarea id="why-how" name="why-how"></textarea>
+                <p>Attach pertinent documents and correspondence with dates.</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-field">
+                <label for="print-name">Print Name:</label>
+                <input type="text" id="print-name" name="print-name">
+            </div>
+            <div class="form-field">
+                <label for="date">Date</label>
+                <input type="text" id="date" name="date">
+            </div>
+        </div>
+    </form>
+
+    <div class="warning">
+        <strong>Important:</strong> It is a crime to report to the Grand Jury that a crime has been committed knowing the report to be false. Penal Code §148.5(d).
+    </div>
+
+    <div class="guidelines">
+        <h2>COMPLAINT GUIDELINES</h2>
+        <p>Receipt of all complaints will be acknowledged by mail. If a matter does not fall within the Palm Beach Grand Jury investigative authority, or the Jury determines not to investigate a complaint, no action will be taken and you will be notified via mail.</p>
+        
+        <h3>The jurisdiction of the Palm Beach Grand Jury includes the following:</h3>
+        <ul>
+            <li>Consideration of evidence of misconduct by public officials within Palm Beach County</li>
+            <li>Inquiry into the condition and management of jails within the County</li>
+        </ul>
+
+        <h3>FILING A COMPLAINT OR REQUEST FOR INVESTIGATION</h3>
+        <p>Any private citizen, governmental employee or officer may ask the Palm Beach Grand Jury to conduct an investigation. This complaint must be in writing and is treated by the jury as confidential. Any request for investigation must include detailed evidence supporting the complaint or request for investigation. If the Grand Jury believes that the evidence is valid and sufficient to support the complaint, a detailed investigation may be held.</p>
+        
+        <h3>The written complaint should cover the following points:</h3>
+        <ul>
+            <li>Specifically who or what agency is the complaint against</li>
+            <li>What is the nature of the complaint</li>
+            <li>What action was improper or illegal</li>
+            <li>When and where did the incident(s) occur</li>
+            <li>What were the consequences of this action</li>
+            <li>What action or remedies are you seeking</li>
+            <li>Why/How. Attach relevant documents and correspondence with dates</li>
+        </ul>
+
+        <h3>Complaints may be submitted via:</h3>
+        <ul>
+            <li>Mail</li>
+            <li>Hand-Delivery</li>
+            <li>Email</li>
+        </ul>
+    </div>
+
+    <div class="print-button">
+        <button onclick="window.print()">Print this form</button>
+    </div>
+</body>
+</html>
